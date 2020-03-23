@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SOe-0P-iAq">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TipS#!%-->
+        <scene sceneID="UXe-Eu-GJm">
+            <objects>
+                <viewController id="49U-g7-u9y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EPN-qz-Aeu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="fOb-eL-7rU">
+                                <rect key="frame" x="25" y="208" width="325" height="396"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-vs-YmZ">
+                                        <rect key="frame" x="75" y="0.0" width="175" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="Dm9-wZ-WH7"/>
+                                            <constraint firstAttribute="width" constant="175" id="bIM-lZ-KVq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-Zl-iZe">
+                                        <rect key="frame" x="75" y="153" width="175" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="3rd-8B-6YV"/>
+                                            <constraint firstAttribute="width" constant="175" id="CDH-HY-nmh"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dJd-0l-TYs">
+                                        <rect key="frame" x="0.0" y="306" width="325" height="90"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-F7-wBM">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.66666666666666" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="175" id="NXO-ge-I3E"/>
+                                                    <constraint firstAttribute="height" constant="90" id="aHd-ot-OFp"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHV-dk-1I8">
+                                                <rect key="frame" x="166.66666666666663" y="0.0" width="158.33333333333337" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="BFM-8P-cQI"/>
+                                                    <constraint firstAttribute="width" constant="175" id="hkt-Vk-R5r"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN4-1H-Wr6">
+                                <rect key="frame" x="16" y="356" width="46" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CyY-Y3-Kjq"/>
+                                    <constraint firstAttribute="height" constant="100" id="Tm5-Uh-jOg"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-Mr-krm">
+                                <rect key="frame" x="348" y="356" width="50" height="100"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1TT-5x-7A8"/>
+                                    <constraint firstAttribute="width" constant="50" id="ejm-ki-Tzu"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BN4-1H-Wr6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EPN-qz-Aeu" secondAttribute="leading" constant="20" id="2Bc-L2-fHx"/>
+                            <constraint firstItem="8Bv-Mr-krm" firstAttribute="centerY" secondItem="EPN-qz-Aeu" secondAttribute="centerY" id="B32-zK-lqC"/>
+                            <constraint firstItem="BN4-1H-Wr6" firstAttribute="centerY" secondItem="EPN-qz-Aeu" secondAttribute="centerY" id="IrU-fk-Hf5"/>
+                            <constraint firstItem="fOb-eL-7rU" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="Lhc-f7-Ium"/>
+                            <constraint firstItem="TOB-Hm-nxk" firstAttribute="trailing" secondItem="fOb-eL-7rU" secondAttribute="trailing" constant="25" id="ND2-B2-b9u"/>
+                            <constraint firstItem="fOb-eL-7rU" firstAttribute="centerY" secondItem="EPN-qz-Aeu" secondAttribute="centerY" id="TRv-6c-lDt"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Bv-Mr-krm" secondAttribute="trailing" constant="20" id="g1d-hH-LUX"/>
+                            <constraint firstItem="fOb-eL-7rU" firstAttribute="leading" secondItem="TOB-Hm-nxk" secondAttribute="leading" constant="25" id="wNO-7u-BAZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TOB-Hm-nxk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TipS#!%" id="j22-zA-VYV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG0-wW-jAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5999999999999" y="142.61083743842366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J8q-MP-Ai3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SOe-0P-iAq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="lO5-gQ-vFQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="49U-g7-u9y" kind="relationship" relationship="rootViewController" id="161-7e-lnh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dL1-Ge-InL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="143"/>
+        </scene>
+    </scenes>
+</document>

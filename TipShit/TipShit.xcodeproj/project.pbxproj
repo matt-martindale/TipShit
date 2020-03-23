@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B224292E830029ACC7 /* AppDelegate.swift */; };
 		C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B424292E830029ACC7 /* SceneDelegate.swift */; };
-		C987D5B724292E830029ACC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B624292E830029ACC7 /* ViewController.swift */; };
 		C987D5BA24292E830029ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5B824292E830029ACC7 /* Main.storyboard */; };
 		C987D5BC24292E840029ACC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C987D5BB24292E840029ACC7 /* Assets.xcassets */; };
 		C987D5BF24292E840029ACC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5BD24292E840029ACC7 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C987D5B624292E830029ACC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C987D5B924292E830029ACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C987D5BB24292E840029ACC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C987D5BE24292E840029ACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,38 @@
 		C987D5B124292E830029ACC7 /* TipShit */ = {
 			isa = PBXGroup;
 			children = (
+				C987D5C024292E840029ACC7 /* Info.plist */,
 				C987D5B224292E830029ACC7 /* AppDelegate.swift */,
 				C987D5B424292E830029ACC7 /* SceneDelegate.swift */,
-				C987D5B624292E830029ACC7 /* ViewController.swift */,
-				C987D5B824292E830029ACC7 /* Main.storyboard */,
 				C987D5BB24292E840029ACC7 /* Assets.xcassets */,
 				C987D5BD24292E840029ACC7 /* LaunchScreen.storyboard */,
-				C987D5C024292E840029ACC7 /* Info.plist */,
+				C987D5C724292EFF0029ACC7 /* Models */,
+				C987D5C624292EED0029ACC7 /* Storyboard */,
+				C987D5C824292F070029ACC7 /* View Controllers */,
 			);
 			path = TipShit;
+			sourceTree = "<group>";
+		};
+		C987D5C624292EED0029ACC7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C987D5B824292E830029ACC7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C987D5C724292EFF0029ACC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C987D5C824292F070029ACC7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C987D5B724292E830029ACC7 /* ViewController.swift in Sources */,
 				C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */,
 				C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.TipShit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.TipShit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

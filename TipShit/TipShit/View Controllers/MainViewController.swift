@@ -37,7 +37,7 @@ class MainViewController: UIViewController {
         tipAmountTextField.layer.cornerRadius = 22
         tipAmountTextField.layer.masksToBounds = true
         
-        totalAmountView.layer.cornerRadius = 10
+        totalAmountView.layer.cornerRadius = 20
         totalAmountView.layer.masksToBounds = true
         personAmountTextField.layer.cornerRadius = 28
         personAmountTextField.layer.masksToBounds = true

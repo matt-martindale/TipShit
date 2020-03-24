@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var calculateTipButton: UIButton!
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountTextField: UITextField!
+    @IBOutlet weak var personAmountTextField: UITextField!
+    @IBOutlet weak var totalAmountTextField: UITextField!
     
 
     override func viewDidLoad() {
@@ -37,6 +39,10 @@ class MainViewController: UIViewController {
         
         totalAmountView.layer.cornerRadius = 10
         totalAmountView.layer.masksToBounds = true
+        personAmountTextField.layer.cornerRadius = 28
+        personAmountTextField.layer.masksToBounds = true
+        totalAmountTextField.layer.cornerRadius = 28
+        totalAmountTextField.layer.masksToBounds = true
         
         calculateTipButton.layer.cornerRadius = 20
         calculateTipButton.layer.masksToBounds = true

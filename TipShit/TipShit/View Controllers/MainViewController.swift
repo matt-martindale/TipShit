@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tipAmountView: UIView!
     @IBOutlet weak var tipAmountTextField: UITextField!
     @IBOutlet weak var personAmountPickerView: UIPickerView!
-    @IBOutlet weak var personAmountLabel: UILabel!
     @IBOutlet weak var tipPercentagePickerView: UIPickerView!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var totalAmountView: UIView!
@@ -30,6 +29,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
+        
         setupSubViews()
     }
     
@@ -53,6 +53,17 @@ class MainViewController: UIViewController {
         
         calculateTipButton.layer.cornerRadius = 20
         calculateTipButton.layer.masksToBounds = true
+    }
+    
+    @IBAction func personAmountButtonTapped(_ sender: UIButton) {
+        personAmountTextField.becomeFirstResponder()
+//        personAmountTextField.inputView = personAmountPickerView
+//        personAmountTextField.text = ""
+//        personAmountTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func tipPercentageButtonTapped(_ sender: UIButton) {
+
     }
     
     
@@ -83,7 +94,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
             let value = tipController.personAmount[row]
-            personAmountLabel.text = String(value)
+            personAmountTextField.text = String(value)
         } else {
             let value = tipController.tipPercentage[row]
             tipPercentageLabel.text = "\(value)%"
@@ -109,8 +120,19 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return label
     }
-    
-    
-    
-    
+}
+
+extension MainViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+
+        // attempt to read the range they are trying to change, or exit if we can't
+        guard let stringRange = Range(range, in: currentText) else { return false }
+
+        // add their new text to the existing text
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        // make sure the result is under 16 characters
+        return updatedText.count <= 3
+    }
 }

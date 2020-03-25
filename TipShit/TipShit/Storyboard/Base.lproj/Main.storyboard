@@ -68,12 +68,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB3-q7-5du">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="28.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
                                                 <color key="tintColor" red="0.52549019610000003" green="0.84313725490000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="person.3.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="personAmountButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="Nuq-6L-Yg8"/>
+                                                </connections>
                                             </button>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-x3-FkZ">
-                                                <rect key="frame" x="0.0" y="33.666666666666629" width="50" height="110"/>
+                                                <rect key="frame" x="0.0" y="36" width="50" height="110"/>
                                                 <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="7iu-sI-8Vd"/>
@@ -84,12 +87,20 @@
                                                     <outlet property="delegate" destination="49U-g7-u9y" id="LCD-YZ-DrM"/>
                                                 </connections>
                                             </pickerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40X-c6-Mka">
-                                                <rect key="frame" x="0.0" y="148.66666666666663" width="50" height="26.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tpy-Xi-bZl">
+                                                <rect key="frame" x="0.0" y="151" width="50" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="9Zp-5b-dAW"/>
+                                                    <constraint firstAttribute="width" constant="50" id="HCx-hb-lfY"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" smartInsertDeleteType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="49U-g7-u9y" id="Bxg-4H-7yW"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="0BX-vQ-AbP"/>
@@ -152,6 +163,9 @@
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     </preferredSymbolConfiguration>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tipPercentageButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="mMz-xV-UAu"/>
+                                                </connections>
                                             </button>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-Mr-krm">
                                                 <rect key="frame" x="0.0" y="36" width="50" height="110"/>
@@ -313,6 +327,11 @@
                                         <state key="normal" title="Confirm Tip">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="piz-cA-BDE" kind="popoverPresentation" popoverAnchorView="7hf-q2-kYO" id="xMP-GI-kB2">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -341,9 +360,8 @@
                         <outlet property="billAmountTextField" destination="2bs-fy-J5V" id="qhF-li-S7K"/>
                         <outlet property="billAmountView" destination="c4y-vs-YmZ" id="xTY-Uv-ri7"/>
                         <outlet property="calculateTipButton" destination="7hf-q2-kYO" id="vrO-z2-m8c"/>
-                        <outlet property="personAmountLabel" destination="40X-c6-Mka" id="7EN-Rh-oFS"/>
                         <outlet property="personAmountPickerView" destination="Zfg-x3-FkZ" id="p5B-eN-XcN"/>
-                        <outlet property="personAmountTextField" destination="6Ti-VQ-SF2" id="g8F-LY-8uM"/>
+                        <outlet property="personAmountTextField" destination="Tpy-Xi-bZl" id="VE4-lh-eZV"/>
                         <outlet property="tipAmountTextField" destination="y7S-Rm-nkx" id="qI7-Ji-Qwt"/>
                         <outlet property="tipAmountView" destination="o0u-Zl-iZe" id="BJm-Vl-47m"/>
                         <outlet property="tipPercentageLabel" destination="2ee-iO-Qqc" id="oKe-fc-ett"/>
@@ -355,6 +373,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PG0-wW-jAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036.231884057971" y="141.96428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pvZ-vl-hql">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="piz-cA-BDE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uzc-P8-Q5l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="r2r-oW-bQ9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQx-IZ-VVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J8q-MP-Ai3">

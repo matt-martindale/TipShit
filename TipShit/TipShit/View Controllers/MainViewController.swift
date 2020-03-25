@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let tipController = TipController()
+    var tipController = TipController()
     
     @IBOutlet weak var billAmountView: UIView!
     @IBOutlet weak var billAmountTextField: UITextField!
@@ -30,8 +30,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
-        setupSubViews()
+        billAmountTextField.becomeFirstResponder()
         createToolbar()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupSubViews()
     }
     
     func setupSubViews() {
@@ -64,6 +69,23 @@ class MainViewController: UIViewController {
         tipPercentageTextField.becomeFirstResponder()
     }
     
+    @IBAction func confirmTipButtonTapped(_ sender: UIButton) {
+        guard billAmountTextField.text!.isEmpty ||
+            tipAmountTextField.text!.isEmpty ||
+            tipPercentageTextField.text!.isEmpty ||
+            personAmountTextField.text!.isEmpty ||
+            pricePerPersonTextField.text!.isEmpty ||
+            totalAmountTextField.text!.isEmpty
+        else { return }
+        let alertController = UIAlertController(title: "Fill in all fields", message: "Calculations don't work with missing information, Numbnuts.", preferredStyle: .actionSheet)
+        alertController.view.backgroundColor = .green
+        let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+//        alertController.view.tintColor = .white
+    }
+    
+    
     func createToolbar() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -73,6 +95,8 @@ class MainViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         toolbar.isUserInteractionEnabled = true
         
+        billAmountTextField.inputAccessoryView = toolbar
+        tipAmountTextField.inputAccessoryView = toolbar
         personAmountTextField.inputAccessoryView = toolbar
         tipPercentageTextField.inputAccessoryView = toolbar
     }
@@ -80,7 +104,25 @@ class MainViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tipPercentage = Int(tipPercentageTextField.text!),
+            let billAmount = Double(billAmountTextField.text!),
+            let tipAmount = Double(tipAmountTextField.text!),
+            let party = Int(personAmountTextField.text!),
+            let pricePerPerson = Double(pricePerPersonTextField.text!),
+            let totalBill = Double(totalAmountTextField.text!) {
+            let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
+            tipController.createTip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
+            if segue.identifier == "DetailSegue" {
+                let detailVC = segue.destination as? TipDetailViewController
+                detailVC?.tipController = tipController
+                detailVC?.tip = tipController.tip
+                detailVC?.tipTier = tipTier
+            }
+        }
+    }
+    
 }
 
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -122,7 +164,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             label = UILabel()
         }
         
-        label.textColor = .lightGray
+        label.textColor = .white
         label.textAlignment = .center
         label.font = UIFont(name: "Helvetica", size: 22)
         

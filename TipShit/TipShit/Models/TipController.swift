@@ -10,6 +10,9 @@ import Foundation
 
 class TipController {
     
+    var tip: Tip? = nil
+    var commentTier: TipTier? = nil
+    
     var personAmount: [Int] {
         var peopleAmount: [Int] = []
         for person in 1...20 {
@@ -30,6 +33,30 @@ class TipController {
             tipPercentage.append(percent)
         }
         return tipPercentage.reversed()
+    }
+    
+    func createTip(billAmount: Double, tipAmount: Double, tipPercentage: Int, party: Int, pricePerPerson: Double, totalBill: Double) {
+        guard let billAmount = tip?.billAmount,
+            let tipAmount = tip?.tipAmount,
+            let tipPercentage = tip?.tipPercentage,
+            let party = tip?.party,
+            let pricePerPerson = tip?.pricePerPerson,
+            let totalBill = tip?.totalBill else { return }
+            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
+        self.tip = newTip
+    }
+    
+    func setTipTier(tipPercentage: Int) -> TipTier {
+        switch tipPercentage {
+        case 0...10:
+            return TipTier.lowTier
+        case 11...20:
+            return TipTier.midTier
+        case 21...100:
+            return TipTier.highTier
+        default:
+            return TipTier.midTier
+        }
     }
     
 }

@@ -10,15 +10,17 @@ import UIKit
 
 class TipDetailViewController: UIViewController {
     
+    var tipController: TipController? = nil
     let comments = Comments()
     var tip: Tip?
+    var tipTier: TipTier?
     
     @IBOutlet weak var commentTextView: UITextView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateView()
         
     }
     
@@ -28,8 +30,8 @@ class TipDetailViewController: UIViewController {
     }
     
     func updateView() {
-        guard let tip = tip else { return }
-        switch tip.comment {
+        guard let tipTier = tipTier else { return }
+        switch tipTier {
         case .lowTier:
             let randomQuote = comments.lowTier.randomElement()
             commentTextView.text = randomQuote

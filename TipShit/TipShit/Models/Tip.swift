@@ -9,17 +9,21 @@
 import Foundation
 
 struct Tip {
-    let billTotal: Double
-    let tipAmount: Double
-    let tipPercentage: Int
-    let party: Int
-    let pricePerPerson: Double
-    let totalBill: Double
-    let comment: CommentTier
-    
-    enum CommentTier {
-        case lowTier
-        case midTier
-        case highTier
-    }
+    let billAmount: Double?
+    let tipAmount: Double?
+    let tipPercentage: Int?
+    let party: Int?
+    let pricePerPerson: Double?
+    let totalBill: Double?
 }
+
+struct Comment {
+    let comment: TipTier?
+}
+
+enum TipTier {
+    case lowTier
+    case midTier
+    case highTier
+}
+

@@ -412,17 +412,18 @@
             </objects>
             <point key="canvasLocation" x="1036.231884057971" y="141.96428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Tip Detail View Controller-->
         <scene sceneID="pvZ-vl-hql">
             <objects>
-                <viewController id="piz-cA-BDE" sceneMemberID="viewController">
+                <viewController id="piz-cA-BDE" customClass="TipDetailViewController" customModule="TipShit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uzc-P8-Q5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Your Tinder date still hates you." translatesAutoresizingMaskIntoConstraints="NO" id="eSm-Ro-tNZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-Ro-tNZ">
                                 <rect key="frame" x="40" y="50" width="334" height="475"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">What, are you trying to impress your date because she wasn't drooling over that story of when you visited Napa Valley, or listening to you talk about your leatherworks?</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -531,6 +532,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r2r-oW-bQ9"/>
                     </view>
+                    <connections>
+                        <outlet property="commentTextView" destination="eSm-Ro-tNZ" id="EB4-Rv-EAU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQx-IZ-VVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

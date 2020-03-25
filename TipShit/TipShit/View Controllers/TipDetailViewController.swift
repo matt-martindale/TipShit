@@ -41,6 +41,9 @@ class TipDetailViewController: UIViewController {
         case .highTier:
             let randomQuote = comments.highTier.randomElement()
             commentTextView.text = randomQuote
+        case .fourTwenty:
+            let randomQuote = comments.fourTwentyTier.randomElement()
+            commentTextView.text = randomQuote
         }
     }
     

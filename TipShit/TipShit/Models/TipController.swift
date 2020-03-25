@@ -48,6 +48,8 @@ class TipController {
     
     func setTipTier(tipPercentage: Int) -> TipTier {
         switch tipPercentage {
+        case 420:
+            return TipTier.fourTwenty
         case 0...10:
             return TipTier.lowTier
         case 11...20:

@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     var tipController = TipController()
+    let alertMessages = AlertMessages()
     
     @IBOutlet weak var billAmountView: UIView!
     @IBOutlet weak var billAmountTextField: UITextField!
@@ -77,8 +78,7 @@ class MainViewController: UIViewController {
             pricePerPersonTextField.text!.isEmpty ||
             totalAmountTextField.text!.isEmpty
         else { return }
-        let alertController = UIAlertController(title: "Fill in all fields", message: "Calculations don't work with missing information, Numbnuts.", preferredStyle: .actionSheet)
-        alertController.view.backgroundColor = .black
+        let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
         okAction.setValue(UIColor.black, forKey: "titleTextColor")
         alertController.addAction(okAction)

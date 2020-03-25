@@ -25,5 +25,6 @@ enum TipTier {
     case lowTier
     case midTier
     case highTier
+    case fourTwenty
 }
 

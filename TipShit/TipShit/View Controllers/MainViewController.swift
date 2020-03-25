@@ -78,11 +78,11 @@ class MainViewController: UIViewController {
             totalAmountTextField.text!.isEmpty
         else { return }
         let alertController = UIAlertController(title: "Fill in all fields", message: "Calculations don't work with missing information, Numbnuts.", preferredStyle: .actionSheet)
-        alertController.view.backgroundColor = .green
+        alertController.view.backgroundColor = .black
         let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        okAction.setValue(UIColor.black, forKey: "titleTextColor")
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
-//        alertController.view.tintColor = .white
     }
     
     

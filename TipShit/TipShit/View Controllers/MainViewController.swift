@@ -10,19 +10,26 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    let tipController = TipController()
+    
     @IBOutlet weak var billAmountView: UIView!
-    @IBOutlet weak var tipAmountView: UIView!
-    @IBOutlet weak var totalAmountView: UIView!
-    @IBOutlet weak var calculateTipButton: UIButton!
     @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var tipAmountView: UIView!
     @IBOutlet weak var tipAmountTextField: UITextField!
+    @IBOutlet weak var personAmountPickerView: UIPickerView!
+    @IBOutlet weak var personAmountLabel: UILabel!
+    @IBOutlet weak var tipPercentagePickerView: UIPickerView!
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var totalAmountView: UIView!
     @IBOutlet weak var personAmountTextField: UITextField!
     @IBOutlet weak var totalAmountTextField: UITextField!
+    @IBOutlet weak var calculateTipButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
+        tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         setupSubViews()
     }
     
@@ -47,5 +54,63 @@ class MainViewController: UIViewController {
         calculateTipButton.layer.cornerRadius = 20
         calculateTipButton.layer.masksToBounds = true
     }
+    
+    
 
+}
+
+extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 {
+            return tipController.personAmount.count
+        } else {
+            return tipController.tipPercentage.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 {
+            return "\(tipController.personAmount[row])"
+        } else {
+            return "\(tipController.tipPercentage[row])"
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView.tag == 1 {
+            let value = tipController.personAmount[row]
+            personAmountLabel.text = String(value)
+        } else {
+            let value = tipController.tipPercentage[row]
+            tipPercentageLabel.text = "\(value)%"
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = .lightGray
+        label.textAlignment = .center
+        label.font = UIFont(name: "Helvetica", size: 20)
+        
+        if pickerView.tag == 1 {
+            label.text = String(tipController.personAmount[row])
+        } else {
+            label.text = String(tipController.tipPercentage[row])
+        }
+        return label
+    }
+    
+    
+    
+    
 }

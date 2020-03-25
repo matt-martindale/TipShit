@@ -17,14 +17,10 @@ class Comments {
         "Your Tinder date still hates you."
     ]
     
-    var highTier: [String] { [
+    var highTier: [String] = [
         "Jeff Bezos over here. We all know you're too much of a cheap ass to tip that.",
-        "What. Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or didn't find it interesting to listen to you talk about your leatherworks?"
+        "Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or interested in listening to you talk about your leatherworks?"
         ]
-    }
     
-    var random: [String] { [
-            "string 1", "string 2", "string 3", "string 4", "string 5"
-        ]
-    }
+    
 }

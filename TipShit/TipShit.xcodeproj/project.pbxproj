@@ -10,6 +10,7 @@
 		C904D50F242AD04300B774E9 /* TipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D50E242AD04300B774E9 /* TipController.swift */; };
 		C904D511242B0DA200B774E9 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D510242B0DA200B774E9 /* Comments.swift */; };
 		C904D513242B0F4100B774E9 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D512242B0F4100B774E9 /* TipDetailViewController.swift */; };
+		C904D515242B2AA200B774E9 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D514242B2AA200B774E9 /* Tip.swift */; };
 		C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B224292E830029ACC7 /* AppDelegate.swift */; };
 		C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B424292E830029ACC7 /* SceneDelegate.swift */; };
 		C987D5BA24292E830029ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5B824292E830029ACC7 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		C904D50E242AD04300B774E9 /* TipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipController.swift; sourceTree = "<group>"; };
 		C904D510242B0DA200B774E9 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		C904D512242B0F4100B774E9 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
+		C904D514242B2AA200B774E9 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				C904D50E242AD04300B774E9 /* TipController.swift */,
 				C904D510242B0DA200B774E9 /* Comments.swift */,
+				C904D514242B2AA200B774E9 /* Tip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				C987D5CA2429A9C40029ACC7 /* MainViewController.swift in Sources */,
 				C904D511242B0DA200B774E9 /* Comments.swift in Sources */,
 				C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */,
+				C904D515242B2AA200B774E9 /* Tip.swift in Sources */,
 				C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */,
 				C904D50F242AD04300B774E9 /* TipController.swift in Sources */,
 				C904D513242B0F4100B774E9 /* TipDetailViewController.swift in Sources */,

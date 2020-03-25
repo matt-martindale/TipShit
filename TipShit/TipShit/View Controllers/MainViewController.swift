@@ -18,9 +18,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tipAmountTextField: UITextField!
     @IBOutlet weak var personAmountPickerView: UIPickerView!
     @IBOutlet weak var tipPercentagePickerView: UIPickerView!
-    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var tipPercentageTextField: UITextField!
     @IBOutlet weak var totalAmountView: UIView!
     @IBOutlet weak var personAmountTextField: UITextField!
+    @IBOutlet weak var pricePerPersonTextField: UITextField!
     @IBOutlet weak var totalAmountTextField: UITextField!
     @IBOutlet weak var calculateTipButton: UIButton!
     
@@ -29,8 +30,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
-        
         setupSubViews()
+        createToolbar()
     }
     
     func setupSubViews() {
@@ -46,8 +47,8 @@ class MainViewController: UIViewController {
         
         totalAmountView.layer.cornerRadius = 20
         totalAmountView.layer.masksToBounds = true
-        personAmountTextField.layer.cornerRadius = 28
-        personAmountTextField.layer.masksToBounds = true
+        pricePerPersonTextField.layer.cornerRadius = 28
+        pricePerPersonTextField.layer.masksToBounds = true
         totalAmountTextField.layer.cornerRadius = 28
         totalAmountTextField.layer.masksToBounds = true
         
@@ -57,16 +58,28 @@ class MainViewController: UIViewController {
     
     @IBAction func personAmountButtonTapped(_ sender: UIButton) {
         personAmountTextField.becomeFirstResponder()
-//        personAmountTextField.inputView = personAmountPickerView
-//        personAmountTextField.text = ""
-//        personAmountTextField.becomeFirstResponder()
     }
     
     @IBAction func tipPercentageButtonTapped(_ sender: UIButton) {
-
+        tipPercentageTextField.becomeFirstResponder()
     }
     
+    func createToolbar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(MainViewController.dismissKeyboard))
+        
+        toolbar.setItems([doneButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        
+        personAmountTextField.inputAccessoryView = toolbar
+        tipPercentageTextField.inputAccessoryView = toolbar
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 }
 
@@ -97,7 +110,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             personAmountTextField.text = String(value)
         } else {
             let value = tipController.tipPercentage[row]
-            tipPercentageLabel.text = "\(value)%"
+            tipPercentageTextField.text = String(value)
         }
     }
     
@@ -111,7 +124,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         label.textColor = .lightGray
         label.textAlignment = .center
-        label.font = UIFont(name: "Helvetica", size: 20)
+        label.font = UIFont(name: "Helvetica", size: 22)
         
         if pickerView.tag == 1 {
             label.text = String(tipController.personAmount[row])
@@ -125,14 +138,9 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 extension MainViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
-
-        // attempt to read the range they are trying to change, or exit if we can't
         guard let stringRange = Range(range, in: currentText) else { return false }
-
-        // add their new text to the existing text
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
 
-        // make sure the result is under 16 characters
         return updatedText.count <= 3
     }
 }

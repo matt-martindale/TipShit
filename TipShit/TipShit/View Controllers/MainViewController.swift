@@ -113,11 +113,11 @@ class MainViewController: UIViewController {
             let pricePerPerson = Double(pricePerPersonTextField.text!),
             let totalBill = Double(totalAmountTextField.text!) {
             let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
-            tipController.createTip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
+            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
             if segue.identifier == "DetailSegue" {
                 let detailVC = segue.destination as? TipDetailViewController
                 detailVC?.tipController = tipController
-                detailVC?.tip = tipController.tip
+                detailVC?.tip = newTip
                 detailVC?.tipTier = tipTier
             }
         }

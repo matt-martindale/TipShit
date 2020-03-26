@@ -19,7 +19,7 @@ class Comments {
     ]
     
     let highTier: [String] = [
-        "Jeff Bezos over here. We all know you're too much of a cheap ass to tip that.",
+        "Jeff Bezos over here. We all know you're too cheap to tip that.",
         "Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or interested in listening to you talk about your leatherworks?"
         ]
     

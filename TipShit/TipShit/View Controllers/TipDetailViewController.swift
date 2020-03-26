@@ -10,26 +10,47 @@ import UIKit
 
 class TipDetailViewController: UIViewController {
     
-    var tipController: TipController? = nil
+    var tipController: TipController?
     let comments = Comments()
     var tip: Tip?
     var tipTier: TipTier?
     
     @IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet weak var billAmountLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var partyLabel: UILabel!
+    @IBOutlet weak var pricePerPersonLabel: UILabel!
+    @IBOutlet weak var totalBillLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView()
-        
+        updateViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateView()
+        selectTier()
     }
     
-    func updateView() {
+    func updateViews() {
+        if let billAmount = tip?.billAmount,
+            let tipAmount = tip?.tipAmount,
+            let tipPercentage = tip?.tipPercentage,
+            let party = tip?.party,
+            let pricerPerPerson = tip?.pricePerPerson,
+            let totalBill = tip?.totalBill {
+            billAmountLabel.text = "$" + String(billAmount)
+            tipAmountLabel.text = "$" + String(tipAmount)
+            tipPercentageLabel.text = String(tipPercentage) + "%"
+            partyLabel.text = String(party)
+            pricePerPersonLabel.text = "$" + String(pricerPerPerson)
+            totalBillLabel.text = "$" + String(totalBill)
+        }
+    }
+    
+    func selectTier() {
         guard let tipTier = tipTier else { return }
         switch tipTier {
         case .lowTier:

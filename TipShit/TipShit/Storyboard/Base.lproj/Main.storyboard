@@ -541,7 +541,13 @@
                         <viewLayoutGuide key="safeArea" id="r2r-oW-bQ9"/>
                     </view>
                     <connections>
+                        <outlet property="billAmountLabel" destination="S9p-bw-HxC" id="Z5h-X0-kHa"/>
                         <outlet property="commentTextView" destination="eSm-Ro-tNZ" id="EB4-Rv-EAU"/>
+                        <outlet property="partyLabel" destination="B84-I4-lmA" id="G1d-c9-8Qk"/>
+                        <outlet property="pricePerPersonLabel" destination="Chr-t8-16Y" id="jSP-0m-ZLI"/>
+                        <outlet property="tipAmountLabel" destination="dYw-yG-IEK" id="IB9-Ex-Ru2"/>
+                        <outlet property="tipPercentageLabel" destination="8mm-KO-h7G" id="Nyr-mq-ytn"/>
+                        <outlet property="totalBillLabel" destination="usR-Rr-o6U" id="Haw-Gh-RQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQx-IZ-VVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

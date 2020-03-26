@@ -10,7 +10,7 @@ import Foundation
 
 struct AlertMessages {
     let messages: [String] = [
-        "Calculations don't work with missing information, Numbnuts.",
+        "Calculations don't work with missing information, Genius.",
         "* ahem * Missing something?",
         "Think you forgot something.",
         "❤️"

@@ -87,10 +87,16 @@ class MainViewController: UIViewController {
     
     
     @IBAction func testButtonTapped(_ sender: Any) {
+        
+    }
+    
+    func updateCalculations() {
         if let billAmount = Double(billAmountTextField.text!),
             let tipPercentage = tipPercentageTextField.text,
             let party = Double(personAmountTextField.text!){
-            let tipAmount = tipController.calculateTipAmount(billAmount: Double(billAmount), tipPercentage: Int(tipPercentage))
+            let roundedBillAmount = Double(round(100*billAmount)/100)
+            let tipAmount = tipController.calculateTipAmount(billAmount: Double(roundedBillAmount), tipPercentage: Int(tipPercentage))
+            billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
             tipAmountTextField.text = String(format: "%.2f", tipAmount)
             let totalAmount = Double(billAmount) + tipAmount
             totalAmountTextField.text = String(format: "%.2f", totalAmount)
@@ -116,6 +122,7 @@ class MainViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+        updateCalculations()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -163,9 +170,11 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if pickerView.tag == 1 {
             let value = tipController.personAmount[row]
             personAmountTextField.text = String(value)
+            updateCalculations()
         } else {
             let value = tipController.tipPercentage[row]
             tipPercentageTextField.text = String(value)
+            updateCalculations()
         }
     }
     

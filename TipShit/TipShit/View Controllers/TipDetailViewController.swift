@@ -41,12 +41,12 @@ class TipDetailViewController: UIViewController {
             let party = tip?.party,
             let pricerPerPerson = tip?.pricePerPerson,
             let totalBill = tip?.totalBill {
-            billAmountLabel.text = "$" + String(billAmount)
-            tipAmountLabel.text = "$" + String(tipAmount)
+            billAmountLabel.text = "$" + String(format: "%.2f", billAmount)
+            tipAmountLabel.text = "$" + String(format: "%.2f", tipAmount)
             tipPercentageLabel.text = String(tipPercentage) + "%"
             partyLabel.text = String(party)
-            pricePerPersonLabel.text = "$" + String(pricerPerPerson)
-            totalBillLabel.text = "$" + String(totalBill)
+            pricePerPersonLabel.text = "$" + String(format: "%.2f", pricerPerPerson)
+            totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
         }
     }
     

@@ -50,6 +50,8 @@ class TipController {
         switch tipPercentage {
         case 420:
             return TipTier.fourTwenty
+        case 69:
+            return TipTier.sixtyNine
         case 0...10:
             return TipTier.lowTier
         case 11...20:

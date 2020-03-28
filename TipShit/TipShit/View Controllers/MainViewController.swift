@@ -79,10 +79,14 @@ class MainViewController: UIViewController {
             totalAmountTextField.text!.isEmpty
         else { return }
         let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
-        let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
         okAction.setValue(UIColor.black, forKey: "titleTextColor")
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func alertHandler(alert: UIAlertAction!) {
+        billAmountTextField.becomeFirstResponder()
     }
     
     func updateCalculations() {

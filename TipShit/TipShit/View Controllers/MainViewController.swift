@@ -85,11 +85,6 @@ class MainViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
-    @IBAction func testButtonTapped(_ sender: Any) {
-        
-    }
-    
     func updateCalculations() {
         if let billAmount = Double(billAmountTextField.text!),
             let tipPercentage = tipPercentageTextField.text,

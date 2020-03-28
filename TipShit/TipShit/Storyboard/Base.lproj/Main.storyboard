@@ -233,7 +233,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-cH-8eR">
-                                <rect key="frame" x="20" y="535.66666666666663" width="374" height="290"/>
+                                <rect key="frame" x="20" y="535.66666666666663" width="374" height="210"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-F7-wBM">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
@@ -369,13 +369,6 @@
                                         <connections>
                                             <action selector="confirmTipButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="h3E-rW-Ef6"/>
                                             <segue destination="piz-cA-BDE" kind="presentation" identifier="DetailSegue" id="xMP-GI-kB2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-b7-vke">
-                                        <rect key="frame" x="164" y="260" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="testButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="6nu-ke-8PH"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -9,12 +9,12 @@
 import Foundation
 
 struct Tip {
-    let billAmount: Double?
-    let tipAmount: Double?
-    let tipPercentage: Int?
-    let party: Int?
-    let pricePerPerson: Double?
-    let totalBill: Double?
+    var billAmount: Double?
+    var tipAmount: Double?
+    var tipPercentage: Int?
+    var party: Int?
+    var pricePerPerson: Double?
+    var totalBill: Double?
 }
 
 struct Comment {

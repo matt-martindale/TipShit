@@ -86,6 +86,19 @@ class MainViewController: UIViewController {
     }
     
     
+    @IBAction func testButtonTapped(_ sender: Any) {
+        if let billAmount = Double(billAmountTextField.text!),
+            let tipPercentage = tipPercentageTextField.text,
+            let party = Double(personAmountTextField.text!){
+            let tipAmount = tipController.calculateTipAmount(billAmount: Double(billAmount), tipPercentage: Int(tipPercentage))
+            tipAmountTextField.text = String(format: "%.2f", tipAmount)
+            let totalAmount = Double(billAmount) + tipAmount
+            totalAmountTextField.text = String(format: "%.2f", totalAmount)
+            let pricePerPerson = totalAmount / party
+            pricePerPersonTextField.text = String(format: "%.2f", pricePerPerson)
+        }
+    }
+    
     func createToolbar() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()

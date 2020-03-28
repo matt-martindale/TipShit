@@ -61,4 +61,14 @@ class TipController {
         }
     }
     
+    func calculateTotalBill(billAmount: Double, tipAmount: Double, tipPercentage: Int) -> Double {
+        return billAmount + calculateTipAmount(billAmount: billAmount, tipPercentage: tipPercentage)
+    }
+    
+    func calculateTipAmount(billAmount: Double?, tipPercentage: Int?) -> Double {
+        guard let billAmount = billAmount,
+            let tipPercentage = tipPercentage else { return 0.0}
+        let adjustedTipPercentage = Double(tipPercentage) / 100
+        return billAmount * adjustedTipPercentage
+    }
 }

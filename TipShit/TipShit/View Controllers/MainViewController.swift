@@ -117,7 +117,16 @@ class MainViewController: UIViewController {
             totalAmountTextField.text = String(format: "%.2f", totalAmount)
             let pricePerPerson = totalAmount / party
             pricePerPersonTextField.text = String(format: "%.2f", pricePerPerson)
+        } else {
+            let alertController = UIAlertController(title: "Invalid amount", message: "Enter a valid bill amount", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: invalidBillAmount)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func invalidBillAmount(alert: UIAlertAction!) {
+        billAmountTextField.becomeFirstResponder()
     }
     
     func updateAmountAfterRoundingTotal() {

@@ -53,4 +53,22 @@ class Comments {
         "58008\n\nSee I can do it too."
     ]
     
+    let sixsixsixTier: [String] = [
+        "Hail Father Stan!\n\nNo Wait, that can't be right.",
+        "Did you bring your Holy Water with you?",
+        "When everybody is obsessed with the 69 but nobody is obsessed with the 666.\n\n*sad demon noises*",
+        "Execute order: 666"
+    ]
+    
+    let hackerTier: [String] = [
+        "Did.. did you just break my app...?",
+        "Hey, how'd you get here? Get out of here. Nothing to see.",
+        "It's dangerous to go alone! Take this.\n\n\t\t\t\t\t\t⚔️",
+        "⬆⬆⬇⬇⬅➡⬅➡ＢＡStart",
+        "That tip amount was never supposed to show up. I feel violated.",
+        "You found my secret area. We have cool parties back here every Wednesday night, 10pm - 2am. You're not invited.",
+        "Don't you dare tell anyone you found out about this place.",
+        "\"Hackerman!\""
+    ]
+    
 }

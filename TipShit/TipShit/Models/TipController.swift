@@ -52,6 +52,8 @@ class TipController {
             return TipTier.fourTwenty
         case 69:
             return TipTier.sixtyNine
+        case 666:
+            return TipTier.sixsixsix
         case 0...10:
             return TipTier.lowTier
         case 11...20:
@@ -59,7 +61,7 @@ class TipController {
         case 21...100:
             return TipTier.highTier
         default:
-            return TipTier.midTier
+            return TipTier.hacker
         }
     }
     

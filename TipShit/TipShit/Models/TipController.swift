@@ -73,4 +73,12 @@ class TipController {
         let adjustedTipPercentage = Double(tipPercentage) / 100
         return billAmount * adjustedTipPercentage
     }
+    
+    func roundUp(oldTotalBill: Double) -> Double {
+        return oldTotalBill.rounded(.up)
+    }
+    
+    func roundDown(oldTotalBill: Double) -> Double {
+        return oldTotalBill.rounded(.down)
+    }
 }

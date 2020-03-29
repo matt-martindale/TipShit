@@ -89,6 +89,22 @@ class MainViewController: UIViewController {
         billAmountTextField.becomeFirstResponder()
     }
     
+    @IBAction func roundUpButtonTapped(_ sender: UIButton) {
+        if let totalBill = Double(totalAmountTextField.text!) {
+            let roundedUpTotal = tipController.roundUp(oldTotalBill: totalBill)
+            totalAmountTextField.text = String(format: "%.2f", roundedUpTotal)
+        }
+        updateAmountAfterRoundingTotal()
+    }
+    
+    @IBAction func roundDownButtonTapped(_ sender: UIButton) {
+        if let totalBill = Double(totalAmountTextField.text!) {
+            let roundedDownTotal = tipController.roundDown(oldTotalBill: totalBill)
+            totalAmountTextField.text = String(format: "%.2f", roundedDownTotal)
+        }
+        updateAmountAfterRoundingTotal()
+    }
+    
     func updateCalculations() {
         if let billAmount = Double(billAmountTextField.text!),
             let tipPercentage = tipPercentageTextField.text,
@@ -101,6 +117,17 @@ class MainViewController: UIViewController {
             totalAmountTextField.text = String(format: "%.2f", totalAmount)
             let pricePerPerson = totalAmount / party
             pricePerPersonTextField.text = String(format: "%.2f", pricePerPerson)
+        }
+    }
+    
+    func updateAmountAfterRoundingTotal() {
+        if let billAmount = Double(billAmountTextField.text!),
+            let personAmount = Double(personAmountTextField.text!),
+            let totalBill = Double(totalAmountTextField.text!) {
+            let newTipAmount = totalBill - billAmount
+            tipAmountTextField.text = String(format: "%.2f", newTipAmount)
+            let newPricePerPerson = totalBill / personAmount
+            pricePerPersonTextField.text = String(format: "%.2f", newPricePerPerson)
         }
     }
     
@@ -169,7 +196,13 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if pickerView.tag == 1 {
             let value = tipController.personAmount[row]
             personAmountTextField.text = String(value)
-            updateCalculations()
+            if let totalAmount = Double(totalAmountTextField.text!) {
+                if totalAmount.truncatingRemainder(dividingBy: 1.0) == 0 {
+                    updateAmountAfterRoundingTotal()
+                } else {
+                    updateCalculations()
+                }
+            }
         } else {
             let value = tipController.tipPercentage[row]
             tipPercentageTextField.text = String(value)

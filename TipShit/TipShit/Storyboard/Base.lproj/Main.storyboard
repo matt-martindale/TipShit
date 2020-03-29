@@ -312,6 +312,9 @@
                                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                                                     </preferredSymbolConfiguration>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="roundUpButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="sGh-Ht-Ojb"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-qQ-aTS">
                                                                                 <rect key="frame" x="2.3333333333333144" y="34.333333333333371" width="25.333333333333332" height="24.333333333333329"/>
@@ -321,6 +324,9 @@
                                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                                                     </preferredSymbolConfiguration>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="roundDownButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="0oG-8x-R3B"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>

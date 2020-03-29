@@ -128,6 +128,10 @@ class MainViewController: UIViewController {
             tipAmountTextField.text = String(format: "%.2f", newTipAmount)
             let newPricePerPerson = totalBill / personAmount
             pricePerPersonTextField.text = String(format: "%.2f", newPricePerPerson)
+            let newTipPercentage = newTipAmount / billAmount
+            let newTip = newTipPercentage * 100
+            let roundedNewTip = Int(newTip.rounded())
+            tipPercentageTextField.text = String(roundedNewTip)
         }
     }
     

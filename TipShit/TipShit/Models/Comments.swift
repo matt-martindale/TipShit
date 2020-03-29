@@ -19,7 +19,7 @@ class Comments {
     let midTier: [String] = [
         "That tip was as mediocre as your personality.",
         "A better home for that tip would be \"r/RoastMe\".",
-        "That was the uglier, fatter cousin of a better tip.",
+        "That was the uglier, fatter version of a better tip.",
         "Oh nice! Now you can add to your dating profile: \"Also a terrible Tipper.\"",
         "I bet your date's as hot as that tip. Not very.",
         "Have an idea for an insult?\n\nSend your requests to: www.ThingsPeopleCalledMeWhenIWasSixteen.com"

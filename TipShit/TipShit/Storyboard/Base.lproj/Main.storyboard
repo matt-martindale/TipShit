@@ -64,11 +64,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3hY-ot-5G6" userLabel="Middle Stack">
                                 <rect key="frame" x="30" y="310.66666666666669" width="354" height="175"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-Hg-G87" userLabel="People Picker">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-Hg-G87" userLabel="People Picker">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB3-q7-5du">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="61"/>
                                                 <color key="tintColor" red="0.52549019610000003" green="0.84313725490000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="person.3.fill" catalog="system"/>
                                                 <connections>
@@ -76,7 +76,7 @@
                                                 </connections>
                                             </button>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-x3-FkZ">
-                                                <rect key="frame" x="0.0" y="41" width="70" height="110"/>
+                                                <rect key="frame" x="0.0" y="51" width="70" height="110"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="7iu-sI-8Vd"/>
@@ -169,11 +169,11 @@
                                             <constraint firstItem="bcE-Ru-mBz" firstAttribute="leading" secondItem="o0u-Zl-iZe" secondAttribute="leading" constant="12" id="mZN-8l-ktK"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fE-xm-grl" userLabel="% Picker">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="4fE-xm-grl" userLabel="% Picker">
                                         <rect key="frame" x="284" y="0.0" width="70" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-GD-uHY">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="71"/>
                                                 <color key="tintColor" red="0.52549019610000003" green="0.84313725490000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="percent" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -185,7 +185,7 @@
                                                 </connections>
                                             </button>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-Mr-krm">
-                                                <rect key="frame" x="0.0" y="41" width="70" height="110"/>
+                                                <rect key="frame" x="0.0" y="56" width="70" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="1TT-5x-7A8"/>

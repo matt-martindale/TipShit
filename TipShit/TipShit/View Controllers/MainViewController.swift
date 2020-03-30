@@ -163,16 +163,16 @@ class MainViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        view.endEditing(true)
         if Double(personAmountTextField.text!) == 0.0 {
-            personAmountTextField.text = ""
             let alertController = UIAlertController(title: "Number in party can't be 0", message: "Unless you plan to dine-and-dash", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Okay, I'll pay", style: .cancel) { _ in
-                self.personAmountTextField.becomeFirstResponder()
+            let okAction = UIAlertAction(title: "Fine, I'll pay...", style: .cancel) { _ in
+                self.personAmountTextField.text = "1"
+                self.updateCalculations()
             }
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }
-        view.endEditing(true)
         updateCalculations()
     }
     

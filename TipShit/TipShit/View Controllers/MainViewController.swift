@@ -9,10 +9,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+
+    // MARK: -Properties
     var tipController = TipController()
     let alertMessages = AlertMessages()
     
+    // MARK: -IBOutlets
     @IBOutlet weak var billAmountView: UIView!
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountView: UIView!
@@ -105,6 +107,7 @@ class MainViewController: UIViewController {
         updateAmountAfterRoundingTotal()
     }
     
+    // MARK: -Functions
     func updateCalculations() {
         if let billAmount = Double(billAmountTextField.text!),
             let tipPercentage = tipPercentageTextField.text,
@@ -164,6 +167,7 @@ class MainViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+        //checks if party number is 0, if true, changes it to 1
         if Double(personAmountTextField.text!) == 0.0 {
             let alertController = UIAlertController(title: "Number in party can't be 0", message: "Unless you plan to dine-and-dash", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Fine, I'll pay...", style: .cancel) { _ in

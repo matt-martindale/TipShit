@@ -58,8 +58,10 @@ class TipController {
             return TipTier.lowTier
         case 11...20:
             return TipTier.midTier
-        case 21...100:
+        case 21...999:
             return TipTier.highTier
+        case ...(-1):
+            return TipTier.negativeHacker
         default:
             return TipTier.hacker
         }

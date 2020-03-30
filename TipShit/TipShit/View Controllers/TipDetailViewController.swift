@@ -71,6 +71,9 @@ class TipDetailViewController: UIViewController {
         case .sixsixsix:
             let randomQuote = comments.sixsixsixTier.randomElement()
             commentTextView.text = randomQuote
+        case .negativeHacker:
+            let randomQuote = comments.negativeHackerTier.randomElement()
+            commentTextView.text = randomQuote
         case .hacker:
             let randomQuote = comments.hackerTier.randomElement()
             commentTextView.text = randomQuote

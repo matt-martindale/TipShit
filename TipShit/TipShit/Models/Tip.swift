@@ -28,6 +28,7 @@ enum TipTier {
     case fourTwenty
     case sixtyNine
     case sixsixsix
+    case negativeHacker
     case hacker
 }
 

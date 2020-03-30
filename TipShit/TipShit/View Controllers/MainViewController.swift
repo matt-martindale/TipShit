@@ -130,6 +130,9 @@ class MainViewController: UIViewController {
     }
     
     func updateAmountAfterRoundingTotal() {
+        if billAmountTextField.text == "0.00" {
+            return
+        }
         if let billAmount = Double(billAmountTextField.text!),
             let personAmount = Double(personAmountTextField.text!),
             let totalBill = Double(totalAmountTextField.text!) {
@@ -160,6 +163,15 @@ class MainViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
+        if Double(personAmountTextField.text!) == 0.0 {
+            personAmountTextField.text = ""
+            let alertController = UIAlertController(title: "Number in party can't be 0", message: "Unless you plan to dine-and-dash", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Okay, I'll pay", style: .cancel) { _ in
+                self.personAmountTextField.becomeFirstResponder()
+            }
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        }
         view.endEditing(true)
         updateCalculations()
     }

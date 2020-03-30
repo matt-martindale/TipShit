@@ -41,7 +41,8 @@ class Comments {
         "You might want to wait til your birthday check from Gammy clears before you tip that.",
         "That's a nice tip. Well, you know what they say? When in.. your local Greco/Mexican restaurant.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
-        "What are you Mr. Beast?\n\nOh man, I hope he's still relevant..\n\nIf not this would be so embarrasing.......... I.. I gotta go."
+        "What are you Mr. Beast?\n\nOh man, I hope he's still relevant..\n\nIf not this would be so embarrasing.......... I.. I gotta go.",
+        "I'm proud of you for tipping that! How does it feel? The only approval you can muster is from a digital tipping app."
         ]
     
     let fourTwentyTier: [String] = [

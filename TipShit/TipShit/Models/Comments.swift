@@ -65,6 +65,7 @@ class Comments {
         "Hey, how'd you get here? Get out of here. Nothing to see.",
         "It's dangerous to go alone! Take this.\n\n\t\t\t\t\t\t⚔️",
         "⬆⬆⬇⬇⬅➡⬅➡ＢＡStart",
+        "It's over 9000!!",
         "That tip amount was never supposed to show up. I feel violated.",
         "You found my secret area. We have cool parties back here every Wednesday night, 10pm - 2am. You're not invited.",
         "Don't you dare tell anyone you found out about this place.",

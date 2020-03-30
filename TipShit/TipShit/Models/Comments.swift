@@ -70,13 +70,23 @@ class Comments {
         "You found my secret area. We have cool parties back here every Wednesday night, 10pm - 2am. You're not invited.",
         "Don't you dare tell anyone you found out about this place.",
         "\"Hackerman!\"",
-        "You weren't supposed to tip more than 999%. You dirty dog, you."
+        "You weren't supposed to tip more than 999%. You dirty dog, you.",
+        #"""
+                 _ ________
+            ___/   )_______)
+                   (/(____)
+            __      (___)
+               \____(_)
+
+               Get Out
+        """#
     ]
     
     let negativeHackerTier: [String] = [
         "How do you expect to tip a negative amount? Seriously..",
         "You figured out how to MAKE money from tipping, good job 👍",
-        "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you, specified in the area below."
+        "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you, specified in the area below.",
+        "Quit trying to break my app! Unless commands make you more adamant in causing chaos. In that case.. keep, trying to break this app. I dare you."
     ]
     
 }

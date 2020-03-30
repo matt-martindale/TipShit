@@ -13,7 +13,9 @@ class Comments {
         "That tip's shit Mate.",
         "I'm sorry, it's been a bad day. I didn't mean to say all these things.",
         "quisquiliae tip",
-        "You know how average looking people take pictures with their ugly friend to make themselves look better? Yeah, yours just helped another one look like Alicia Vikander."
+        "You know how average looking people take pictures with their ugly friend to make themselves look better? Yeah, yours just helped another one look like Alicia Vikander.",
+        "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
+        "That tip was so weak, if it was an animal I'd put it down."
     ]
     
     let midTier: [String] = [
@@ -22,14 +24,24 @@ class Comments {
         "That was the uglier, fatter version of a better tip.",
         "Oh nice! Now you can add to your dating profile: \"Also a terrible Tipper.\"",
         "I bet your date's as hot as that tip. Not very.",
-        "Have an idea for an insult?\n\nSend your requests to: www.ThingsPeopleCalledMeWhenIWasSixteen.com"
+        "Have an idea for an insult?\n\nSend your requests to: www.ThingsPeopleCalledMeWhenIWasSixteen.com",
+        "Really? That's what you're gonna tip?",
+        "Nope.. nope.. nope. Go back. Try again.",
+        "Well... That's one way of tipping. Another way to tip would be \"good.\"",
+        "That was aaaaalmost on the verge of not being a pathetic tip.",
+        "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
+        "You see that cute person across the restaurant looking at you? Yeah, me neither.."
     ]
     
     let highTier: [String] = [
         "Jeff Bezos over here. We all know you're too cheap to tip that.",
         "Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or interested in listening to you talk about your leatherworks?",
         "Talk is cheap, put your money where your mouth is.",
-        "Your Tinder date still hates you."
+        "Your Tinder date still hates you.",
+        "You might want to wait til your birthday check from Gammy clears before you tip that.",
+        "That's a nice tip. Well, you know what they say? When in.. your local Greco/Mexican restaurant.",
+        "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
+        "What are you Mr. Beast?\n\nOh man, I hope he's still relevant..\n\nIf not this would be so embarrasing.......... I.. I gotta go."
         ]
     
     let fourTwentyTier: [String] = [

@@ -41,8 +41,7 @@ class Comments {
         "You might want to wait til your birthday check from Gammy clears before you tip that.",
         "That's a nice tip. Well, you know what they say? When in.. your local Greco/Mexican restaurant.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
-        "What are you Mr. Beast?\n\nOh man, I hope he's still relevant..\n\nIf not this would be so embarrasing.......... I.. I gotta go.",
-        "I'm proud of you for tipping that! How does it feel? The only approval you can muster is from a digital tipping app."
+        "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app."
         ]
     
     let fourTwentyTier: [String] = [
@@ -99,7 +98,7 @@ class Comments {
         "How do you expect to tip a negative amount? Seriously..",
         "You figured out how to MAKE money from tipping, good job 👍",
         "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you, specified in the area below.",
-        "Quit trying to break my app! Unless commands make you more adamant in causing chaos. In that case.. keep, trying to break this app. I dare you."
+        "Quit trying to break my app! Unless people giving you commands make you even more adamant in causing chaos.\nIn that case.. feel free to break this app.\n\nI dare you!!"
     ]
     
 }

@@ -12,12 +12,10 @@ This iOS app allows you to do all normal things a tipping calculator does:
 
 **Except this one comes with one handy-dandy feature...**
 
-## It critiques and judges your tip
+## It critiques and judges your tip.
+>  Some might say in a helpful way
 
 <p align="center">
 <img src="https://github.com/matt-martindale/TipsAndGiggles/blob/master/Images/Tip%24%23!%25.png" width="450" />
 </p>
 
-<p align="center">
-> Some might say in a helpful way
-</p>

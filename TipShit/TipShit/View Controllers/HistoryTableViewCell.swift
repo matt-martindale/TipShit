@@ -25,7 +25,7 @@ class HistoryTableViewCell: UITableViewCell {
             let totalBill = tip.totalBill,
             let tipPercentage = tip.tipPercentage {
             dateLabel.text = tip.date?.toString()
-            totalBillLabel.text = String(format: "%.2f", totalBill)
+            totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
             tipPercentLabel.text = String(tipPercentage) + "%"
         }
     }

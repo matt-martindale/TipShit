@@ -15,6 +15,7 @@ struct Tip {
     var party: Int?
     var pricePerPerson: Double?
     var totalBill: Double?
+    var date: Date?
 }
 
 struct Comment {

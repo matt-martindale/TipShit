@@ -10,6 +10,7 @@ import Foundation
 
 class TipController {
     
+    var tips: [Tip] = []
     var tip: Tip? = nil
     var commentTier: TipTier? = nil
     
@@ -42,8 +43,9 @@ class TipController {
             let party = tip?.party,
             let pricePerPerson = tip?.pricePerPerson,
             let totalBill = tip?.totalBill else { return }
-            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
+            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill, date: Date())
         self.tip = newTip
+        tips.append(newTip)
     }
     
     func setTipTier(tipPercentage: Int) -> TipTier {

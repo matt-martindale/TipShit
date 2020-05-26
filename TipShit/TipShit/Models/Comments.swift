@@ -15,7 +15,7 @@ class Comments {
         "quisquiliae tip",
         "You know how average looking people take pictures with their ugly friend to make themselves look better? Yeah, yours just helped another one look like Alicia Vikander.",
         "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
-        "That tip was so weak, if it was an animal I'd put it down."
+        "That tip was so weak, if it were an animal I'd put it down."
     ]
     
     let midTier: [String] = [
@@ -39,7 +39,6 @@ class Comments {
         "Talk is cheap, put your money where your mouth is.",
         "Your Tinder date still hates you.",
         "You might want to wait til your birthday check from Gammy clears before you tip that.",
-        "That's a nice tip. Well, you know what they say? When in.. your local Greco/Mexican restaurant.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
         "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app."
         ]

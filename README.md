@@ -19,3 +19,6 @@ This iOS app allows you to do all normal things a tipping calculator does:
 <img src="https://github.com/matt-martindale/TipsAndGiggles/blob/master/Images/Tip%24%23!%25.png" width="450" />
 </p>
 
+## How it works
+
+

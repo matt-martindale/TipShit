@@ -21,8 +21,12 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var tipPercentLabel: UILabel!
     
     func updateView() {
-        if let tip = tip {
-            dateLabel.text = tip.date
+        if let tip = tip,
+            let totalBill = tip.totalBill,
+            let tipPercentage = tip.tipPercentage {
+            dateLabel.text = tip.date?.toString()
+            totalBillLabel.text = String(format: "%.2f", totalBill)
+            tipPercentLabel.text = String(tipPercentage) + "%"
         }
     }
     

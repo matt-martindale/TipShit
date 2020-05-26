@@ -9,30 +9,28 @@
 import UIKit
 
 class HistoryTableViewController: UITableViewController {
-    
-    var tipController: TipController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let tipController = tipController {
-            return tipController.tips.count
-        } else {
-            print("Error, no tipController instance")
-            return 0
-        }
+        return Tips.shared.tips.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TipCell", for: indexPath) as! HistoryTableViewCell
 
-        // Configure the cell...
+        cell.tip = Tips.shared.tips[indexPath.row]
 
         return cell
     }

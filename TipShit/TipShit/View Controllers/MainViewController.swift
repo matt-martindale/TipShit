@@ -79,7 +79,13 @@ class MainViewController: UIViewController {
             personAmountTextField.text!.isEmpty ||
             pricePerPersonTextField.text!.isEmpty ||
             totalAmountTextField.text!.isEmpty
-        else { return }
+            else {
+                if let tipPercentage = Int(tipPercentageTextField.text!),
+                    let totalBill = Double(totalAmountTextField.text!) {
+                    tipController.createTip(tipPercentage: tipPercentage, totalBill: totalBill)
+                }
+                return
+        }
         let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
         okAction.setValue(UIColor.black, forKey: "titleTextColor")

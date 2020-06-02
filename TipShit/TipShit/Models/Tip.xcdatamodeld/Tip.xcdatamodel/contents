@@ -3,6 +3,7 @@
     <entity name="Tip" representedClassName="Tip" syncable="YES" codeGenerationType="class">
         <attribute name="billAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="identifier" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="party" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="pricePerPerson" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -11,6 +12,6 @@
         <attribute name="totalBill" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Tip" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Tip" positionX="-63" positionY="-18" width="128" height="178"/>
     </elements>
 </model>

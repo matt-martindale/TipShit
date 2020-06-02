@@ -20,6 +20,7 @@
 		C967C1162485EED800C33BF4 /* Tip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1152485EED800C33BF4 /* Tip+Convenience.swift */; };
 		C967C1182485F05000C33BF4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1172485F05000C33BF4 /* CoreDataStack.swift */; };
 		C967C11A2485F87600C33BF4 /* TipRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1192485F87600C33BF4 /* TipRepresentation.swift */; };
+		C967C11C2485FC2B00C33BF4 /* Tip+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */; };
 		C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B224292E830029ACC7 /* AppDelegate.swift */; };
 		C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B424292E830029ACC7 /* SceneDelegate.swift */; };
 		C987D5BA24292E830029ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5B824292E830029ACC7 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		C967C1152485EED800C33BF4 /* Tip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Convenience.swift"; sourceTree = "<group>"; };
 		C967C1172485F05000C33BF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C967C1192485F87600C33BF4 /* TipRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepresentation.swift; sourceTree = "<group>"; };
+		C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
 		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C967C1192485F87600C33BF4 /* TipRepresentation.swift */,
 				C967C0EC247CBA5A00C33BF4 /* Tips.swift */,
 				C967C1122485EC8700C33BF4 /* Tip.xcdatamodeld */,
+				C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				C967C0EB247CAF4200C33BF4 /* Date+Formatter.swift in Sources */,
 				C904D511242B0DA200B774E9 /* Comments.swift in Sources */,
 				C967C1142485EC8700C33BF4 /* Tip.xcdatamodeld in Sources */,
+				C967C11C2485FC2B00C33BF4 /* Tip+Codable.swift in Sources */,
 				C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */,
 				C967C1162485EED800C33BF4 /* Tip+Convenience.swift in Sources */,
 				C904D515242B2AA200B774E9 /* Tip.swift in Sources */,

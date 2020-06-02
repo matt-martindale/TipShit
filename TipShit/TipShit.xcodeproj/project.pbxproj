@@ -21,6 +21,7 @@
 		C967C1182485F05000C33BF4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1172485F05000C33BF4 /* CoreDataStack.swift */; };
 		C967C11A2485F87600C33BF4 /* TipRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1192485F87600C33BF4 /* TipRepresentation.swift */; };
 		C967C11C2485FC2B00C33BF4 /* Tip+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */; };
+		C97AC16C2485FFDF00200110 /* NetworkCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AC16B2485FFDF00200110 /* NetworkCalls.swift */; };
 		C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B224292E830029ACC7 /* AppDelegate.swift */; };
 		C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B424292E830029ACC7 /* SceneDelegate.swift */; };
 		C987D5BA24292E830029ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5B824292E830029ACC7 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		C967C1172485F05000C33BF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C967C1192485F87600C33BF4 /* TipRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepresentation.swift; sourceTree = "<group>"; };
 		C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
+		C97AC16B2485FFDF00200110 /* NetworkCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCalls.swift; sourceTree = "<group>"; };
 		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C967C11D2485FD6800C33BF4 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C97AC16B2485FFDF00200110 /* NetworkCalls.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		C987D5A624292E830029ACC7 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 				C987D5B424292E830029ACC7 /* SceneDelegate.swift */,
 				C987D5BB24292E840029ACC7 /* Assets.xcassets */,
 				C987D5BD24292E840029ACC7 /* LaunchScreen.storyboard */,
+				C967C11D2485FD6800C33BF4 /* Model Controller */,
 				C987D5C724292EFF0029ACC7 /* Models */,
 				C987D5C624292EED0029ACC7 /* Storyboard */,
 				C987D5C824292F070029ACC7 /* View Controllers */,
@@ -218,6 +229,7 @@
 				C967C0E9247CAA5400C33BF4 /* HistoryTableViewCell.swift in Sources */,
 				C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */,
 				C967C0E7247CA95900C33BF4 /* HistoryTableViewController.swift in Sources */,
+				C97AC16C2485FFDF00200110 /* NetworkCalls.swift in Sources */,
 				C904D50F242AD04300B774E9 /* TipController.swift in Sources */,
 				C904D517242C12B900B774E9 /* AlertMessages.swift in Sources */,
 				C904D513242B0F4100B774E9 /* TipDetailViewController.swift in Sources */,

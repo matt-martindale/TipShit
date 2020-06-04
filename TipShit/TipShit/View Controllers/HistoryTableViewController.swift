@@ -15,7 +15,7 @@ class HistoryTableViewController: UITableViewController {
         
         let fetchRequest: NSFetchRequest<Tip> = Tip.fetchRequest()
         
-        let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: false)
         
         fetchRequest.sortDescriptors = [dateSortDescriptor]
         
@@ -70,17 +70,25 @@ class HistoryTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let tip = fetchedResultsController.object(at: indexPath)
+            let context = CoreDataStack.shared.mainContext
+            
+            context.delete(tip)
+            
+            do {
+                try context.save()
+            } catch {
+                NSLog("Error saving context after deletion:\(error)")
+                context.reset()
+            }
+            
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
     /*
      // Override to support rearranging the table view.

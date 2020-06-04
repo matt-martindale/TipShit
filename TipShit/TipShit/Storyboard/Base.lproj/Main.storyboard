@@ -563,7 +563,7 @@
             </objects>
             <point key="canvasLocation" x="2746.376811594203" y="141.96428571428569"/>
         </scene>
-        <!--Tip HIstory-->
+        <!--Tip History-->
         <scene sceneID="Ksx-a1-A24">
             <objects>
                 <tableViewController id="YJb-XT-Xno" customClass="HistoryTableViewController" customModule="TipShit" customModuleProvider="target" sceneMemberID="viewController">
@@ -576,22 +576,22 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Rqk-zi-GZj">
-                                    <rect key="frame" x="25" y="11.999999999999998" width="364" height="20.333333333333329"/>
+                                    <rect key="frame" x="15" y="11.999999999999998" width="384" height="20.333333333333329"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIg-9o-4UM">
-                                            <rect key="frame" x="0.0" y="0.0" width="88" height="20.333333333333332"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIg-9o-4UM">
+                                            <rect key="frame" x="0.0" y="0.0" width="94.666666666666671" height="20.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PK-Bi-M7r">
-                                            <rect key="frame" x="138" y="0.0" width="88" height="20.333333333333332"/>
+                                            <rect key="frame" x="144.66666666666666" y="0.0" width="94.666666666666657" height="20.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-yI-rOF">
-                                            <rect key="frame" x="276" y="0.0" width="88" height="20.333333333333332"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-yI-rOF">
+                                            <rect key="frame" x="289.33333333333331" y="0.0" width="94.666666666666686" height="20.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -601,8 +601,8 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Rqk-zi-GZj" secondAttribute="trailing" constant="25" id="W1x-KT-n5O"/>
-                                <constraint firstItem="Rqk-zi-GZj" firstAttribute="leading" secondItem="Idk-CA-faE" secondAttribute="leading" constant="25" id="fHN-5q-jeV"/>
+                                <constraint firstAttribute="trailing" secondItem="Rqk-zi-GZj" secondAttribute="trailing" constant="15" id="W1x-KT-n5O"/>
+                                <constraint firstItem="Rqk-zi-GZj" firstAttribute="leading" secondItem="Idk-CA-faE" secondAttribute="leading" constant="15" id="fHN-5q-jeV"/>
                                 <constraint firstItem="Rqk-zi-GZj" firstAttribute="centerY" secondItem="Idk-CA-faE" secondAttribute="centerY" id="fib-Xc-kcg"/>
                             </constraints>
                         </view>
@@ -664,7 +664,7 @@
                             <outlet property="delegate" destination="YJb-XT-Xno" id="7fZ-5N-DHT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tip HIstory" id="RLw-w8-yv8"/>
+                    <navigationItem key="navigationItem" title="Tip History" id="RLw-w8-yv8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hR-f8-Wbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

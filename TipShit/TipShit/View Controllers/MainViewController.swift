@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     // MARK: -Properties
     var tipController = TipController()
     let alertMessages = AlertMessages()
+    var tip: Tip?
     
     // MARK: -IBOutlets
     @IBOutlet weak var billAmountView: UIView!
@@ -73,24 +74,45 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func confirmTipButtonTapped(_ sender: UIButton) {
-        guard billAmountTextField.text!.isEmpty ||
-            tipAmountTextField.text!.isEmpty ||
-            tipPercentageTextField.text!.isEmpty ||
-            personAmountTextField.text!.isEmpty ||
-            pricePerPersonTextField.text!.isEmpty ||
-            totalAmountTextField.text!.isEmpty
-            else {
-                if let tipPercentage = Int(tipPercentageTextField.text!),
-                    let totalBill = Double(totalAmountTextField.text!) {
-                    tipController.createTip(tipPercentage: tipPercentage, totalBill: totalBill)
-                }
-                return
+//        guard billAmountTextField.text!.isEmpty,
+//            tipAmountTextField.text!.isEmpty,
+//            tipPercentageTextField.text!.isEmpty,
+//            personAmountTextField.text!.isEmpty,
+//            pricePerPersonTextField.text!.isEmpty,
+//            totalAmountTextField.text!.isEmpty
+//            else {
+//                if let tipPercentage = Int(tipPercentageTextField.text!),
+//                    let totalBill = Double(totalAmountTextField.text!) {
+//                    tipController.createTip(tipPercentage: tipPercentage, totalBill: totalBill)
+//                }
+//                return
+//        }
+        if let billAmount = Double(billAmountTextField.text!),
+            let tipAmount = Double(tipAmountTextField.text!),
+            let tipPercentage = Int64(tipPercentageTextField.text!),
+            let party = Int64(personAmountTextField.text!),
+            let pricePerPerson = Double(pricePerPersonTextField.text!),
+            let totalBill = Double(totalAmountTextField.text!) {
+            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill)
+            self.tip = newTip
+            
+            let context = CoreDataStack.shared.mainContext
+            
+            do {
+                try context.save()
+            } catch {
+                NSLog("Error saving context to persistent store")
+                context.reset()
+            }
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
+            okAction.setValue(UIColor.black, forKey: "titleTextColor")
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
-        let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
-        let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
-        okAction.setValue(UIColor.black, forKey: "titleTextColor")
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
     }
     
     func alertHandler(alert: UIAlertAction!) {
@@ -187,20 +209,21 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tipPercentage = Int(tipPercentageTextField.text!),
-            let billAmount = Double(billAmountTextField.text!),
-            let tipAmount = Double(tipAmountTextField.text!),
-            let party = Int(personAmountTextField.text!),
-            let pricePerPerson = Double(pricePerPersonTextField.text!),
-            let totalBill = Double(totalAmountTextField.text!) {
-            let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
-            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
+//        if let tipPercentage = Int(tipPercentageTextField.text!),
+//            let billAmount = Double(billAmountTextField.text!),
+//            let tipAmount = Double(tipAmountTextField.text!),
+//            let party = Int(personAmountTextField.text!),
+//            let pricePerPerson = Double(pricePerPersonTextField.text!),
+//            let totalBill = Double(totalAmountTextField.text!) {
+        guard let tip = tip else { print("No tip in prepareForSegue"); return }
+        let tipTier = tipController.setTipTier(tipPercentage: tip.tipPercentage)
+//            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
             if segue.identifier == "DetailSegue" {
                 let detailVC = segue.destination as? TipDetailViewController
                 detailVC?.tipController = tipController
-                detailVC?.tip = newTip
+                detailVC?.tip = tip
                 detailVC?.tipTier = tipTier
-            }
+//            }
         }
     }
     

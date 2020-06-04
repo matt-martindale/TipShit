@@ -22,7 +22,6 @@ class CoreDataStack {
                 fatalError("Failed to load persistent stores: \(error)")
             }
         }
-        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
     

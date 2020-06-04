@@ -12,6 +12,15 @@
 		C904D513242B0F4100B774E9 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D512242B0F4100B774E9 /* TipDetailViewController.swift */; };
 		C904D515242B2AA200B774E9 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D514242B2AA200B774E9 /* Tip.swift */; };
 		C904D517242C12B900B774E9 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904D516242C12B900B774E9 /* AlertMessages.swift */; };
+		C967C0E7247CA95900C33BF4 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C0E6247CA95900C33BF4 /* HistoryTableViewController.swift */; };
+		C967C0E9247CAA5400C33BF4 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C0E8247CAA5400C33BF4 /* HistoryTableViewCell.swift */; };
+		C967C0EB247CAF4200C33BF4 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C0EA247CAF4200C33BF4 /* Date+Formatter.swift */; };
+		C967C0ED247CBA5A00C33BF4 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C0EC247CBA5A00C33BF4 /* Tips.swift */; };
+		C967C1142485EC8700C33BF4 /* Tip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C967C1122485EC8700C33BF4 /* Tip.xcdatamodeld */; };
+		C967C1162485EED800C33BF4 /* Tip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1152485EED800C33BF4 /* Tip+Convenience.swift */; };
+		C967C1182485F05000C33BF4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1172485F05000C33BF4 /* CoreDataStack.swift */; };
+		C967C11A2485F87600C33BF4 /* TipRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C1192485F87600C33BF4 /* TipRepresentation.swift */; };
+		C967C11C2485FC2B00C33BF4 /* Tip+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */; };
 		C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B224292E830029ACC7 /* AppDelegate.swift */; };
 		C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C987D5B424292E830029ACC7 /* SceneDelegate.swift */; };
 		C987D5BA24292E830029ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C987D5B824292E830029ACC7 /* Main.storyboard */; };
@@ -26,6 +35,15 @@
 		C904D512242B0F4100B774E9 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		C904D514242B2AA200B774E9 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		C904D516242C12B900B774E9 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		C967C0E6247CA95900C33BF4 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		C967C0E8247CAA5400C33BF4 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		C967C0EA247CAF4200C33BF4 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		C967C0EC247CBA5A00C33BF4 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		C967C1132485EC8700C33BF4 /* Tip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tip.xcdatamodel; sourceTree = "<group>"; };
+		C967C1152485EED800C33BF4 /* Tip+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Convenience.swift"; sourceTree = "<group>"; };
+		C967C1172485F05000C33BF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C967C1192485F87600C33BF4 /* TipRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepresentation.swift; sourceTree = "<group>"; };
+		C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
 		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,10 +107,17 @@
 		C987D5C724292EFF0029ACC7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C904D50E242AD04300B774E9 /* TipController.swift */,
-				C904D510242B0DA200B774E9 /* Comments.swift */,
-				C904D514242B2AA200B774E9 /* Tip.swift */,
 				C904D516242C12B900B774E9 /* AlertMessages.swift */,
+				C904D510242B0DA200B774E9 /* Comments.swift */,
+				C967C1172485F05000C33BF4 /* CoreDataStack.swift */,
+				C967C0EA247CAF4200C33BF4 /* Date+Formatter.swift */,
+				C904D514242B2AA200B774E9 /* Tip.swift */,
+				C967C1152485EED800C33BF4 /* Tip+Convenience.swift */,
+				C904D50E242AD04300B774E9 /* TipController.swift */,
+				C967C1192485F87600C33BF4 /* TipRepresentation.swift */,
+				C967C0EC247CBA5A00C33BF4 /* Tips.swift */,
+				C967C1122485EC8700C33BF4 /* Tip.xcdatamodeld */,
+				C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +127,8 @@
 			children = (
 				C987D5C92429A9C40029ACC7 /* MainViewController.swift */,
 				C904D512242B0F4100B774E9 /* TipDetailViewController.swift */,
+				C967C0E6247CA95900C33BF4 /* HistoryTableViewController.swift */,
+				C967C0E8247CAA5400C33BF4 /* HistoryTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,11 +204,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C967C1182485F05000C33BF4 /* CoreDataStack.swift in Sources */,
 				C987D5CA2429A9C40029ACC7 /* MainViewController.swift in Sources */,
+				C967C11A2485F87600C33BF4 /* TipRepresentation.swift in Sources */,
+				C967C0EB247CAF4200C33BF4 /* Date+Formatter.swift in Sources */,
 				C904D511242B0DA200B774E9 /* Comments.swift in Sources */,
+				C967C1142485EC8700C33BF4 /* Tip.xcdatamodeld in Sources */,
+				C967C11C2485FC2B00C33BF4 /* Tip+Codable.swift in Sources */,
 				C987D5B324292E830029ACC7 /* AppDelegate.swift in Sources */,
+				C967C1162485EED800C33BF4 /* Tip+Convenience.swift in Sources */,
 				C904D515242B2AA200B774E9 /* Tip.swift in Sources */,
+				C967C0ED247CBA5A00C33BF4 /* Tips.swift in Sources */,
+				C967C0E9247CAA5400C33BF4 /* HistoryTableViewCell.swift in Sources */,
 				C987D5B524292E830029ACC7 /* SceneDelegate.swift in Sources */,
+				C967C0E7247CA95900C33BF4 /* HistoryTableViewController.swift in Sources */,
 				C904D50F242AD04300B774E9 /* TipController.swift in Sources */,
 				C904D517242C12B900B774E9 /* AlertMessages.swift in Sources */,
 				C904D513242B0F4100B774E9 /* TipDetailViewController.swift in Sources */,
@@ -380,6 +416,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C967C1122485EC8700C33BF4 /* Tip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C967C1132485EC8700C33BF4 /* Tip.xcdatamodel */,
+			);
+			currentVersion = C967C1132485EC8700C33BF4 /* Tip.xcdatamodel */;
+			path = Tip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C987D5A724292E830029ACC7 /* Project object */;
 }

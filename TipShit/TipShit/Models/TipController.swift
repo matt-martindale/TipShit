@@ -35,18 +35,13 @@ class TipController {
         return tipPercentage.reversed()
     }
     
-    func createTip(billAmount: Double, tipAmount: Double, tipPercentage: Int, party: Int, pricePerPerson: Double, totalBill: Double) {
-        guard let billAmount = tip?.billAmount,
-            let tipAmount = tip?.tipAmount,
-            let tipPercentage = tip?.tipPercentage,
-            let party = tip?.party,
-            let pricePerPerson = tip?.pricePerPerson,
-            let totalBill = tip?.totalBill else { return }
-            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
-        self.tip = newTip
-    }
+//    func createTip(tipPercentage: Int, totalBill: Double) {
+//        let newTip = Tip(tipPercentage: tipPercentage, totalBill: totalBill, date: Date())
+//        Tips.shared.tips.append(newTip)
+//        self.tip = newTip
+//    }
     
-    func setTipTier(tipPercentage: Int) -> TipTier {
+    func setTipTier(tipPercentage: Int64) -> TipTier {
         switch tipPercentage {
         case 420:
             return TipTier.fourTwenty

@@ -8,27 +8,28 @@
 
 import Foundation
 
-struct Tip {
-    var billAmount: Double?
-    var tipAmount: Double?
-    var tipPercentage: Int?
-    var party: Int?
-    var pricePerPerson: Double?
-    var totalBill: Double?
-}
-
-struct Comment {
-    let comment: TipTier?
-}
-
-enum TipTier {
-    case lowTier
-    case midTier
-    case highTier
-    case fourTwenty
-    case sixtyNine
-    case sixsixsix
-    case negativeHacker
-    case hacker
-}
+//struct Tip {
+//    var billAmount: Double?
+//    var tipAmount: Double?
+//    var tipPercentage: Int?
+//    var party: Int?
+//    var pricePerPerson: Double?
+//    var totalBill: Double?
+//    var date: Date?
+//}
+//
+//struct Comment {
+//    let comment: TipTier?
+//}
+//
+//enum TipTier: String, Codable {
+//    case lowTier = "low"
+//    case midTier
+//    case highTier
+//    case fourTwenty
+//    case sixtyNine
+//    case sixsixsix
+//    case negativeHacker
+//    case hacker
+//}
 

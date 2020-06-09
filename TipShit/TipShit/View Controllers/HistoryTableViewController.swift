@@ -23,7 +23,7 @@ class HistoryTableViewController: UITableViewController {
         
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
                                              managedObjectContext: context,
-                                             sectionNameKeyPath: "date",
+                                             sectionNameKeyPath: nil,
                                              cacheName: nil)
         
         frc.delegate = self
@@ -94,6 +94,7 @@ class HistoryTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
+        cell.backgroundColor = indexPath.row % 2 == 0 ? #colorLiteral(red: 0.08313494176, green: 0.08264852315, blue: 0.08351386338, alpha: 1) : .black
         cell.tip = fetchedResultsController.object(at: indexPath)
         
         return cell

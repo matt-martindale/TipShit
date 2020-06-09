@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
-        billAmountTextField.becomeFirstResponder()
         createToolbar()
     }
     

@@ -95,6 +95,14 @@ class HistoryTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = indexPath.row % 2 == 0 ? #colorLiteral(red: 0.08313494176, green: 0.08264852315, blue: 0.08351386338, alpha: 1) : .black
+        
+        // Customize cell accessory view
+        let image = UIImage(systemName: "chevron.right")
+        let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
+        accessory.image = image
+        accessory.tintColor = #colorLiteral(red: 0.5254901961, green: 0.8431372549, blue: 0.7294117647, alpha: 1)
+        cell.accessoryView = accessory
+        
         cell.tip = fetchedResultsController.object(at: indexPath)
         
         return cell

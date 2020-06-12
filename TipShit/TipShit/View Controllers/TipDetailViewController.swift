@@ -31,7 +31,7 @@ class TipDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        selectTier()
+//        selectTier()
     }
     
     func updateViews() {
@@ -40,13 +40,15 @@ class TipDetailViewController: UIViewController {
             let tipPercentage = tip?.tipPercentage,
             let party = tip?.party,
             let pricerPerPerson = tip?.pricePerPerson,
-            let totalBill = tip?.totalBill {
+            let totalBill = tip?.totalBill,
+            let comment = tip?.tipTier {
             billAmountLabel.text = "$" + String(format: "%.2f", billAmount)
             tipAmountLabel.text = "$" + String(format: "%.2f", tipAmount)
             tipPercentageLabel.text = String(tipPercentage) + "%"
             partyLabel.text = String(party)
             pricePerPersonLabel.text = "$" + String(format: "%.2f", pricerPerPerson)
             totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
+            commentTextView.text = comment
         }
     }
     

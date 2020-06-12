@@ -92,7 +92,10 @@ class MainViewController: UIViewController {
             let party = Int64(personAmountTextField.text!),
             let pricePerPerson = Double(pricePerPersonTextField.text!),
             let totalBill = Double(totalAmountTextField.text!) {
-            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill)
+            
+            let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
+            
+            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipTier)
             self.tip = newTip
             
             let context = CoreDataStack.shared.mainContext
@@ -215,13 +218,12 @@ class MainViewController: UIViewController {
 //            let pricePerPerson = Double(pricePerPersonTextField.text!),
 //            let totalBill = Double(totalAmountTextField.text!) {
         guard let tip = tip else { print("No tip in prepareForSegue"); return }
-        let tipTier = tipController.setTipTier(tipPercentage: tip.tipPercentage)
+//        let tipTier = tipController.setTipTier(tipPercentage: tip.tipPercentage)
 //            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
             if segue.identifier == "DetailSegue" {
                 let detailVC = segue.destination as? TipDetailViewController
                 detailVC?.tipController = tipController
                 detailVC?.tip = tip
-                detailVC?.tipTier = tipTier
 //            }
         }
     }

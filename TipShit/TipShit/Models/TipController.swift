@@ -41,25 +41,60 @@ class TipController {
 //        self.tip = newTip
 //    }
     
-    func setTipTier(tipPercentage: Int64) -> TipTier {
+    func setTipTier(tipPercentage: Int64) -> String {
         switch tipPercentage {
         case 420:
-            return TipTier.fourTwenty
+            return getRandomComment(tipTier: .fourTwenty)
+//            return TipTier.fourTwenty
         case 69:
-            return TipTier.sixtyNine
+            return getRandomComment(tipTier: .sixtyNine)
         case 666:
-            return TipTier.sixsixsix
+            return getRandomComment(tipTier: .sixsixsix)
         case 0...10:
-            return TipTier.lowTier
+            return getRandomComment(tipTier: .lowTier)
         case 11...20:
-            return TipTier.midTier
+            return getRandomComment(tipTier: .midTier)
         case 21...999:
-            return TipTier.highTier
+            return getRandomComment(tipTier: .highTier)
         case ...(-1):
-            return TipTier.negativeHacker
+            return getRandomComment(tipTier: .negativeHacker)
         default:
-            return TipTier.hacker
+            return getRandomComment(tipTier: .hacker)
         }
+    }
+    
+    func getRandomComment(tipTier: TipTier) -> String {
+        let comments = Comments()
+        let comment = ""
+        
+        switch tipTier {
+        case .fourTwenty:
+            let randomIndex = Int.random(in: 0..<comments.fourTwentyTier.count - 1)
+            return comments.fourTwentyTier[randomIndex]
+        case .sixtyNine:
+            let randomIndex = Int.random(in: 0..<comments.sixtyNineTier.count - 1)
+            return comments.sixtyNineTier[randomIndex]
+        case .sixsixsix:
+            let randomIndex = Int.random(in: 0..<comments.sixsixsixTier.count - 1)
+            return comments.sixsixsixTier[randomIndex]
+        case .lowTier:
+            let randomIndex = Int.random(in: 0..<comments.lowTier.count - 1)
+            return comments.lowTier[randomIndex]
+        case .midTier:
+            let randomIndex = Int.random(in: 0..<comments.midTier.count - 1)
+            return comments.midTier[randomIndex]
+        case .highTier:
+            let randomIndex = Int.random(in: 0..<comments.highTier.count - 1)
+            return comments.highTier[randomIndex]
+        case .negativeHacker:
+            let randomIndex = Int.random(in: 0..<comments.negativeHackerTier.count - 1)
+            return comments.negativeHackerTier[randomIndex]
+        default:
+            let randomIndex = Int.random(in: 0..<comments.hackerTier.count - 1)
+            return comments.hackerTier[randomIndex]
+        }
+        
+        return comment
     }
     
     func calculateTotalBill(billAmount: Double, tipAmount: Double, tipPercentage: Int) -> Double {

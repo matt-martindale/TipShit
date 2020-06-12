@@ -29,6 +29,7 @@ extension Tip {
         tipAmount: Double,
         tipPercentage: Int64,
         totalBill: Double,
+        tipTier: String,
         identifier: UUID = UUID(),
         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
@@ -41,6 +42,7 @@ extension Tip {
         self.tipAmount = tipAmount
         self.tipPercentage = tipPercentage
         self.totalBill = totalBill
+        self.tipTier = tipTier
         self.identifier = identifier
     }
     

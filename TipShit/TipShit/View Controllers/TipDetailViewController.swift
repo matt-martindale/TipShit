@@ -11,9 +11,7 @@ import UIKit
 class TipDetailViewController: UIViewController {
     
     var tipController: TipController?
-    let comments = Comments()
     var tip: Tip?
-    var tipTier: TipTier?
     
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
@@ -27,11 +25,6 @@ class TipDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        selectTier()
     }
     
     func updateViews() {
@@ -51,36 +44,5 @@ class TipDetailViewController: UIViewController {
             commentTextView.text = comment
         }
     }
-    
-    func selectTier() {
-        guard let tipTier = tipTier else { return }
-        switch tipTier {
-        case .lowTier:
-            let randomQuote = comments.lowTier.randomElement()
-            commentTextView.text = randomQuote
-        case .midTier:
-            let randomQuote = comments.midTier.randomElement()
-            commentTextView.text = randomQuote
-        case .highTier:
-            let randomQuote = comments.highTier.randomElement()
-            commentTextView.text = randomQuote
-        case .fourTwenty:
-            let randomQuote = comments.fourTwentyTier.randomElement()
-            commentTextView.text = randomQuote
-        case .sixtyNine:
-            let randomQuote = comments.sixtyNineTier.randomElement()
-            commentTextView.text = randomQuote
-        case .sixsixsix:
-            let randomQuote = comments.sixsixsixTier.randomElement()
-            commentTextView.text = randomQuote
-        case .negativeHacker:
-            let randomQuote = comments.negativeHackerTier.randomElement()
-            commentTextView.text = randomQuote
-        case .hacker:
-            let randomQuote = comments.hackerTier.randomElement()
-            commentTextView.text = randomQuote
-        }
-    }
-    
 
 }

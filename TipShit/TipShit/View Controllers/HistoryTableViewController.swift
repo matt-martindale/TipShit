@@ -126,6 +126,15 @@ class HistoryTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TableViewToDetailViewSegue" {
+            guard let detailVC = segue.destination as? TipDetailViewController else { return }
+            if let indexPath = tableView.indexPathForSelectedRow {
+                detailVC.tip = fetchedResultsController.object(at: indexPath)
+            }
+        }
+    }
+    
 }
 
 extension HistoryTableViewController: NSFetchedResultsControllerDelegate {

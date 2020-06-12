@@ -654,6 +654,7 @@
                                     <outlet property="dateLabel" destination="hWl-A6-zRj" id="Z88-h5-JzE"/>
                                     <outlet property="tipPercentLabel" destination="osd-Wg-wI0" id="LlK-hG-gcT"/>
                                     <outlet property="totalBillLabel" destination="Hvf-LC-fwg" id="jBE-0w-NOu"/>
+                                    <segue destination="c5D-uL-gXD" kind="show" identifier="TableViewToDetailViewSegue" id="0LU-2M-AAJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -742,6 +743,148 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8o8-RQ-AZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1151" y="835"/>
+        </scene>
+        <!--Tip Detail View Controller-->
+        <scene sceneID="umh-Az-0Sh">
+            <objects>
+                <viewController id="c5D-uL-gXD" customClass="TipDetailViewController" customModule="TipShit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rCM-3i-ac2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WQD-gl-w9O">
+                                <rect key="frame" x="40" y="190" width="334" height="365"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uJc-vf-mZQ" userLabel="Left Stack">
+                                <rect key="frame" x="60" y="585" width="294" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Bill Amount  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6W-zH-QMa">
+                                        <rect key="frame" x="0.0" y="0.0" width="275.33333333333331" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W93-Es-mPG">
+                                        <rect key="frame" x="0.0" y="33" width="283" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-Vg-5t2">
+                                        <rect key="frame" x="0.0" y="66" width="288" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjq-Pr-gth">
+                                        <rect key="frame" x="0.0" y="99" width="260.33333333333331" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price /Person  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXE-HF-ceU">
+                                        <rect key="frame" x="0.0" y="132" width="290.33333333333331" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL BILL  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xn-HV-1Vi">
+                                        <rect key="frame" x="0.0" y="165" width="274.66666666666669" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y4h-rM-AOJ" userLabel="Right Stack">
+                                <rect key="frame" x="60" y="585" width="294" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="$89.57" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6i-xA-dWh">
+                                        <rect key="frame" x="235.66666666666671" y="0.0" width="58.333333333333343" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$13.44" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpf-sJ-EVR">
+                                        <rect key="frame" x="235.66666666666671" y="33" width="58.333333333333343" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUc-T5-Er8">
+                                        <rect key="frame" x="255.66666666666671" y="66" width="38.333333333333343" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21P-5v-6iv">
+                                        <rect key="frame" x="283.33333333333331" y="99" width="10.666666666666686" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7I-7v-ygp">
+                                        <rect key="frame" x="246.33333333333329" y="132" width="47.666666666666657" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$103.01" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-iU-TVt">
+                                        <rect key="frame" x="221.66666666666671" y="165" width="72.333333333333343" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UUc-T5-Er8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="8U5-Kh-RGk"/>
+                                    <constraint firstItem="Fpf-sJ-EVR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="AoG-9e-YGJ"/>
+                                    <constraint firstItem="21P-5v-6iv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="EbG-iY-QRA"/>
+                                    <constraint firstItem="b6i-xA-dWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="NXd-xF-0mT"/>
+                                    <constraint firstItem="dNC-iU-TVt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="PGq-h0-837"/>
+                                    <constraint firstItem="X7I-7v-ygp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="fUv-tl-Upg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="y4h-rM-AOJ" secondAttribute="trailing" constant="60" id="CuO-Dt-tLd"/>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="WQD-gl-w9O" secondAttribute="trailing" constant="40" id="JL4-mw-Paa"/>
+                            <constraint firstItem="uJc-vf-mZQ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="RiW-Fh-b1U"/>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="uJc-vf-mZQ" secondAttribute="trailing" constant="60" id="VNG-8J-rkA"/>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="y4h-rM-AOJ" secondAttribute="bottom" constant="40" id="X8Y-nA-AOl"/>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="uJc-vf-mZQ" secondAttribute="bottom" constant="40" id="XRM-qE-lhf"/>
+                            <constraint firstItem="y4h-rM-AOJ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="h94-IH-KSG"/>
+                            <constraint firstItem="uJc-vf-mZQ" firstAttribute="top" secondItem="WQD-gl-w9O" secondAttribute="bottom" constant="30" id="iv2-6b-cX8"/>
+                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" constant="50" id="ziM-6D-7l0"/>
+                            <constraint firstItem="WQD-gl-w9O" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="40" id="zqD-QG-c2C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rMO-zV-7dz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tY9-lc-cYn"/>
+                    <connections>
+                        <outlet property="billAmountLabel" destination="b6i-xA-dWh" id="OQ4-nf-Y01"/>
+                        <outlet property="commentTextView" destination="WQD-gl-w9O" id="AS1-v1-fYL"/>
+                        <outlet property="partyLabel" destination="21P-5v-6iv" id="FcU-xT-QdP"/>
+                        <outlet property="pricePerPersonLabel" destination="X7I-7v-ygp" id="L1d-ki-aYg"/>
+                        <outlet property="tipAmountLabel" destination="Fpf-sJ-EVR" id="2d3-KW-BPp"/>
+                        <outlet property="tipPercentageLabel" destination="UUc-T5-Er8" id="a0q-HB-J2o"/>
+                        <outlet property="totalBillLabel" destination="dNC-iU-TVt" id="pXf-E8-UnG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOA-Kj-sSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="834"/>
         </scene>
     </scenes>
     <resources>

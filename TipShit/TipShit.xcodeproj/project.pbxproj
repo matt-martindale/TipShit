@@ -44,7 +44,7 @@
 		C967C1172485F05000C33BF4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C967C1192485F87600C33BF4 /* TipRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipRepresentation.swift; sourceTree = "<group>"; };
 		C967C11B2485FC2B00C33BF4 /* Tip+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
-		C987D5AF24292E830029ACC7 /* TipShit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipShit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C987D5AF24292E830029ACC7 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C987D5B224292E830029ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C987D5B424292E830029ACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C987D5B924292E830029ACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		C987D5B024292E830029ACC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C987D5AF24292E830029ACC7 /* TipShit.app */,
+				C987D5AF24292E830029ACC7 /* HitTips.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			);
 			name = TipShit;
 			productName = TipShit;
-			productReference = C987D5AF24292E830029ACC7 /* TipShit.app */;
+			productReference = C987D5AF24292E830029ACC7 /* HitTips.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -370,8 +370,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.TipShit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
+				PRODUCT_NAME = HitTips;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -387,8 +387,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.TipShit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
+				PRODUCT_NAME = HitTips;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TipS#!%-->
+        <!--HitTips-->
         <scene sceneID="UXe-Eu-GJm">
             <objects>
                 <viewController id="49U-g7-u9y" customClass="MainViewController" customModule="TipShit" customModuleProvider="target" sceneMemberID="viewController">
@@ -402,7 +402,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TOB-Hm-nxk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="TipS#!%" id="j22-zA-VYV"/>
+                    <navigationItem key="navigationItem" title="HitTips" id="j22-zA-VYV"/>
                     <connections>
                         <outlet property="billAmountTextField" destination="2bs-fy-J5V" id="qhF-li-S7K"/>
                         <outlet property="billAmountView" destination="c4y-vs-YmZ" id="xTY-Uv-ri7"/>
@@ -464,8 +464,8 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price / Person  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdY-eB-vbX">
-                                        <rect key="frame" x="0.0" y="132" width="282" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price / Person  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdY-eB-vbX">
+                                        <rect key="frame" x="0.0" y="132" width="294" height="23"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

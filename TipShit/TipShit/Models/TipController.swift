@@ -65,7 +65,6 @@ class TipController {
     
     func getRandomComment(tipTier: TipTier) -> String {
         let comments = Comments()
-        let comment = ""
         
         switch tipTier {
         case .fourTwenty:
@@ -93,8 +92,6 @@ class TipController {
             let randomIndex = Int.random(in: 0..<comments.hackerTier.count - 1)
             return comments.hackerTier[randomIndex]
         }
-        
-        return comment
     }
     
     func calculateTotalBill(billAmount: Double, tipAmount: Double, tipPercentage: Int) -> Double {
